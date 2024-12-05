@@ -1,5 +1,5 @@
-// @ts-check
-const { test, expect } = require('@playwright/test');
+/*
+Old Asana code 
 
 // URL to test website "Asana"
 const url = "https://app.asana.com/-/login";
@@ -89,4 +89,4 @@ const verify = async (page, testCase) => {
     const tagName = await pageTag.innerText();
     await expect(testCase["cardTags"].includes(tagName)).toBe(true);
   });
-}
+}*/
