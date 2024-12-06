@@ -92,8 +92,8 @@ const verify = async (page, testCase) => {
 
   const pageTags = await card.locator(`.flex`).first().locator(`span`).allInnerTexts();
 
-  pageTags.forEach(async (pageTag) => {
-    await console.log("Tag: "+pageTag+" is in "+testCase["cardTags"]);
-    await expect(testCase["cardTags"].includes(pageTag)).toBe(true);
+  testCase["cardTags"].forEach(async (cardTag) => {
+    await console.log("Tag: "+cardTag+" is in "+pageTags);
+    await expect(pageTags.includes(cardTag)).toBe(true);
   });
 }
